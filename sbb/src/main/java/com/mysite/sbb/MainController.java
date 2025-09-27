@@ -6,13 +6,11 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 
 @Controller
-
-public class HelloController {
-    @GetMapping("/hello")
+public class MainController {
+    @GetMapping("/sbb")
     @ResponseBody
-    public String hello() {
-        return "Hello Spring Boot Board";
+    public String index() {
+        return "안녕하세요 sbb에 오신 것을 환영합니다.";
     }
-    
 
 }
