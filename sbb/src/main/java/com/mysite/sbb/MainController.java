@@ -5,6 +5,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 
+
 @Controller
 public class MainController {
     @GetMapping("/sbb")
@@ -13,4 +14,9 @@ public class MainController {
         return "안녕하세요 sbb에 오신 것을 환영합니다.";
     }
 
+    @GetMapping("/")
+    public String root() {
+        return "redirect:/question/list";
+    }
+    
 }
